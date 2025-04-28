@@ -1,0 +1,21 @@
+supervised_model:
+  n_estimators: 200
+  max_depth: 10
+  class_weight: balanced
+  threshold: 0.5
+
+anomaly_model:
+  n_estimators: 150
+  contamination: 0.01
+  threshold: -0.35
+
+preprocessing:
+  numeric_features:
+    - Amount
+    - MerchantID
+    - TransactionHour
+    - TransactionDay
+    - TransactionMonth
+  categorical_features:
+    - TransactionType
+    - Location
